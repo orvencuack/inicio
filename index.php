@@ -1,13 +1,3 @@
-<?php
-
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "usuarios_orven";
-
-$enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -47,20 +37,3 @@ $enlace = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
     </div>
 </body>
 </html>
-
-
-
-<?php
-
-if (isset($_POST['Registrate'])) {
-    $Nombre = $_POST['Nombre'];
-    $Apellido = $_POST['Apellido'];
-    $Email = $_POST['Email'];
-    $Contraseña = $_POST['Contraseña'];
-    $insertarDatos ="INSERT INTO registros VALUES ('$Nombre', '$Apellido', '$Email','$Contraseña', '')";
-
-    $ejecutarInsertar = mysqli_query($enlace,$insertarDatos);
-
-}
-
-?>
